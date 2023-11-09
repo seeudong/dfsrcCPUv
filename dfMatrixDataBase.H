@@ -33,12 +33,19 @@ int *owner = NULL;
 int *neighbor = NULL;
 
 // constant fields - internal
+double *mag_sf = NULL;
 double *weight = NULL;
 
-//constant fields - internal
+double *delta_coeffs = NULL;
 double *volume = NULL;
 
-// non-constant fields - internal 
+// constant fields - boundary
+double *boundary_mag_sf = NULL;
+
+/**
+ * non-constant fields - internal
+ * */  
+
 // fields solved by eqns - new
 double *rho = NULL;
 double *u = NULL;
@@ -49,5 +56,16 @@ double *rho_old = NULL;
 // other shared fields between eqns
 double *phi = NULL;
 
+// other shared fields between eqns - thermophysical
+double *mu = NULL;
+
+/**
+ * non-constant fields - boundary
+ * */
+
 // other shared fields between eqns
 double *boundary_phi = NULL;
+
+// other shared fields between eqns - thermophysical
+double *boundary_mu = NULL;
+

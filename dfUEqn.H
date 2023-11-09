@@ -8,6 +8,9 @@ int *patch_type = NULL;
 // boundary coeff fields
 double *value_internal_coeffs = NULL;
 double *value_boundary_coeffs= NULL;
+double *gradient_internal_coeffs= NULL;
+double *gradient_boundary_coeffs= NULL;
+
 
 // non-constant fields - ldu
 double *lower = NULL;
