@@ -71,9 +71,9 @@ void fvm_div_vector(int num_surfaces, int num_boundary_surfaces,
             boundary_coeffs[2 + start_index * 3] -= boundary_f * value_boundary_coeffs[2 + start_index * 3] * sign;
         }
         if(patch_type[i] == processor|| patch_type[i] == processorCyclic) 
-            offset += 2 + patch_size[i];
+            offset += 2 * num;
         else
-            offset += 1 + patch_size[i];
+            offset += num;
 
     }
 
